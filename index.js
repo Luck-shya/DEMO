@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { MongoClient } = require("mongodb");
-const mongoose = require("mongoose");
 let alert = require("alert");
 require("./db/config");
 
@@ -29,7 +28,7 @@ app.post("/submit", async (req, res) => {
 });
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 3001;
+  port = 5000;
 }
 app.listen(port, function () {
   console.log(`Server started successfully ${port}`);
